@@ -1,0 +1,212 @@
+/* 全体的なスタイル */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    font-size: 1.3em; /* 全体の基準となるフォントサイズを少し大きくする */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2em; /* bodyの1.1emを基準に2倍に */
+}
+
+/* アコーディオンの共通スタイル */
+.accordion {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background-color: #1f1e30ff;
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #2b2a40;
+}
+
+/* ヘッダーのアイコン（+ / -） */
+.accordion-header::after {
+    content: '+';
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active::after {
+    content: '-';
+    transform: rotate(0deg);
+}
+
+.accordion-content {
+    padding: 0 20px;
+    background-color: #f9f9f9;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    overflow-y: auto;
+}
+
+.accordion-content.open {
+    max-height: 700px;
+    padding: 15px 20px;
+}
+
+/* ヒント本文（アコーディオンコンテンツ内のテキスト）の余白 */
+.hint-body {
+    padding: 5px 0;
+}
+.hint-body p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em; /* bodyのフォントサイズを継承 */
+}
+
+
+/* 入れ子アコーディオンのスタイル */
+.inner-accordion {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: 1px dashed #bbb;
+}
+
+.inner-accordion .accordion-header {
+    background-color: #2a6fc9;
+    padding: 10px 15px;
+}
+
+.inner-accordion .accordion-header:hover {
+    background-color: #2980b9;
+}
+
+.inner-accordion .accordion-content {
+    background-color: #ecf0f1;
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    overflow-y: auto;
+}
+
+.inner-accordion .accordion-content.open {
+    max-height: 500px;
+    padding: 10px 15px;
+}
+
+/* パスワード入力エリア */
+.password-area {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #eee;
+    text-align: center;
+}
+
+.password-area input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.password-area button {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.password-area button:hover {
+    background-color: #d35400;
+}
+
+#finalHint {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px dashed #e74c3c;
+    background-color: #fcecec;
+    color: #c0392b;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.guideline-heading {
+    text-align: center;
+}
+.red-text {
+    color: red;
+    font-weight: bold;
+}
+.hint-image {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+/* スタート画面のスタイル */
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#start-screen h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #2c3e50;
+}
+
+#start-screen p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+#show-hint-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#show-hint-button:hover {
+    background-color: #2980b9;
+}
+
+#hint-content {
+    display: none;
+}
