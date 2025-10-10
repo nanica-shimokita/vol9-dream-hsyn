@@ -6,7 +6,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
-    font-size: 1.3em; /* 全体の基準となるフォントサイズを少し大きくする */
+    font-size: 1.1em; /* 全体の基準となるフォントサイズを少し大きくする */
 }
 
 .container {
