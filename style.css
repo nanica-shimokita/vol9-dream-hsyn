@@ -22,7 +22,7 @@ h1 {
     text-align: center;
     color: #2c3e50;
     margin-bottom: 40px;
-    font-size: 2em; /* bodyの1.1emを基準に2倍に */
+    font-size: 1.8em; /* bodyの1.1emを基準に2倍に */
 }
 
 /* アコーディオンの共通スタイル */
